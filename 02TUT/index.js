@@ -5,71 +5,47 @@
  */
 
 //importing common Core module : using commonJS
-const fs = require('fs');
+const fsPromises = require('fs').promises; 
+
+//fs.promises API is a set of asynchronous file system methods that return promises, making it easier to work with asynchronous code using async and await.
+
+
 const path = require('path'); //path module: preventing hard coding of the file path
 
-
-/**
- * READ FILE
- */
-//fs.readFile('./files/sample.txt','utf8',(err, data)=>{
-fs.readFile(path.join(__dirname, 'files','sample.txt'), 'utf8', (err, data)=>{    
-    if(err) throw err;
-    //console.log(data); //loads buffer data, outputs : <Buffer 48 65 6c 6c 6f 2c 20 73 61 6d 70 6c 65 20 66 69 6c 65 2e>
-    //console.log(data.toString()); //loads string data
-    console.log(data); //we added utf8 ; no need string
-});
-
 /**
  * 
- * FOR ASYNC 
+ * READ, WRITE and APPEND but CALLBACK HANDLED :  callback hell
  * 
  */
-//prints this first : why? : node tackles the issues while processing the other tasks : async wait
-console.log('hello...');
 
-/**
- *  WRITE FILE
- * no  need of utf8, it is by default
- * no data in call back, only err
- * pathname,content to write, callback
- */ 
+const fileOps = async() => {
+    try{
+        const data  = await fsPromises.readFile(path.join(__dirname, 'files','loaderFile.txt'), 'utf8');
+        console.log(data);
 
-fs.writeFile(path.join(__dirname, 'files', 'newWriteFile.txt'), 'This file is created just now!', (err)=>{
-    if(err) throw err;
-    console.log("Writing complete");
+        //DELETE FILE
+        //await fsPromises.unlink(path.join(__dirname, 'files','loaderFile.txt'));
 
 
-    //APPEND AFTER WRITING THE FILE
-    fs.appendFile(path.join(__dirname,'files','newWriteFile.txt'),'\n\nAppended to the file',(err)=>{
-        if(err) throw err;
-        console.log('Appending complete');
+        await fsPromises.writeFile(path.join(__dirname, 'files','promiseWrite.txt'), data);
 
-        //RENAME AFTER APPENDING THE CONTENT TO FILE
-        //OTHER append work like renaming the file etc, that needs to be in sync series too
+        await fsPromises.appendFile(path.join(__dirname, 'files','promiseWrite.txt'), 'This is appended!\n\n it feels good to learn node');
 
-        fs.rename(path.join(__dirname,'files','newWriteFile.txt'), path.join(__dirname,'files','renamedWriteFile.txt'),(err)=>{
-            if(err) throw err;
-            console.log("Renaming done");
-        })
-    })
-});
+        await fsPromises.rename(path.join(__dirname, 'files','promiseWrite.txt'),path.join(__dirname, 'files','promiseRename.txt'));
 
-/**
- *  APPEND TO FILE
- * 
- * creates a file if it doesnt exist before
- * 
- * ASNYC nature of JS : runs this before writeFile func
- * 
- * to prevent this, we can call appendFile to writeFile call back function : check above func
- * 
- */ 
 
-/*fs.appendFile(path.join(__dirname,'files','appendedFile.txt'),'Appended to the file',(err)=>{
-    if(err) throw err;
-    console.log('Appending complete');
-});*/
+        //reading new file
+
+        const newData  = await fsPromises.readFile(path.join(__dirname, 'files','promiseRename.txt'), 'utf8');
+        console.log(newData);
+
+    }catch(err){
+        console.log(err);
+    }
+}
+
+fileOps();
+
 
 /**
  * 
