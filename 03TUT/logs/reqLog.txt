@@ -1,0 +1,9 @@
+20241004	18:58:42	7a79eb60-cf74-4bba-bd86-56f11f3f2e5f	/new-page.html	GET
+	20241004	18:58:42	7c94a394-a613-416a-acba-7277c4d0fdc1	/css/style.css	GET
+	20241004	18:58:42	83114e06-566a-4e40-9954-9a4e042bab84	/img/img1.jpg	GET
+	20241004	18:58:42	fded0328-30bb-4b3f-8f09-94a8b9704885	/favicon.ico	GET
+	20241004	18:59:39	5844efba-07f5-4203-8483-31ee8fe7c06e	/new-page.html	GET
+	20241004	19:00:01	31f0e45e-8ce4-4232-9097-8bde75a75dae	/new-page.html	GET
+	20241004	19:00:01	5005cc0a-a507-422f-8e3e-5b841bc1f953	/css/style.css	GET
+	20241004	19:00:01	ae8e64fc-f6bc-463e-aa77-2aef75e04a19	/img/img1.jpg	GET
+	
