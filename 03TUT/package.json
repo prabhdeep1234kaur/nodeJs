@@ -1,7 +1,7 @@
 {
-  "name": "05tut",
+  "name": "06tut-expressJS",
   "version": "1.0.0",
-  "description": "",
+  "description": "Express JS",
   "main": "server.js",
   "scripts": {
     "start": "node server",
@@ -12,6 +12,7 @@
   "dependencies": {
     "-": "^0.0.1",
     "date-fns": "^3.6.0",
+    "express": "^4.21.0",
     "uuid": "^10.0.0"
   },
   "devDependencies": {
