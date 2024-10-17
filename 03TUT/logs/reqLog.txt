@@ -43,4 +43,44 @@ undefined
 	20241017	14:34:28	0eafa476-857f-44e8-b65f-86ce8bf6050e	GET	undefined	/css/style.css
 	20241017	14:34:44	59108afe-5f94-4a02-a630-4b81fe705d78	GET	undefined	/
 	20241017	14:34:44	32b4c5e4-737c-4e43-aad4-b5fb5ce11efe	GET	undefined	/css/style.css
+	20241017	20:58:12	b274a6dc-f0be-4cbe-b587-5943f6978b2f	GET	undefined	/
+	20241017	20:58:12	7d8049be-eb47-439f-8943-28499239c918	GET	undefined	/css/style.css
+	20241017	20:58:44	407b7155-33bc-4cb7-8548-7af677971482	GET	undefined	/subdir
+	20241017	20:58:52	1da820b1-c946-40d9-9e6b-a94cd1731ef2	GET	undefined	/subdir/test
+	20241017	21:23:22	784e93cf-996b-407f-9d34-b2fcd8e8d8fc	GET	undefined	/sre
+	20241017	21:23:22	5e5fcf30-adc2-44c7-a88b-50b66d5d570d	GET	undefined	/css/style.css
+	20241017	21:24:33	34a1ee9b-f6ab-45b4-80f8-b06c0ca20f8c	GET	undefined	/subdir/test
+	20241017	21:24:40	c3d9c6c9-893f-46ad-b8e2-88903dea48dd	GET	undefined	/subdir
+	20241017	21:24:40	9b0c2c28-f06b-4a36-848d-17b44c5436c7	GET	undefined	/subdir/
+	20241017	21:24:56	9ae01594-600f-486d-8976-eb7fd1984c3f	GET	undefined	/subdir/ere
+	20241017	21:24:56	1a92420b-583e-4fd1-be7c-0821f36ae9b3	GET	undefined	/subdir/css/style.css
+	20241017	21:29:14	2168b2b4-d3fe-42ab-8aa3-8df8ddcc4993	GET	undefined	/subdir/ere
+	20241017	21:29:14	54c10d80-3642-43a4-9653-876592c76960	GET	undefined	/subdir/css/style.css
+	20241017	21:29:19	8e81e9a2-aa58-462b-8a0d-b730ce3072f4	GET	undefined	/
+	20241017	21:29:24	08b23f51-e757-4629-beb0-2fc7fe2b6d75	GET	undefined	/index
+	20241017	21:30:12	6f7fbb83-bca5-468f-a666-3026414e19e9	GET	undefined	/index
+	20241017	21:30:12	6e3a602e-a2b1-43cc-97cf-672212d01600	GET	undefined	/css/style.css
+	20241017	21:30:21	f12c6096-01a7-421a-b563-57fada5057c0	GET	undefined	/subdir/
+	20241017	21:30:24	41ab90fc-b9c1-4c87-839f-1c0b09701166	GET	undefined	/subdir/sddsd
+	20241017	21:30:25	72247785-1422-4165-bc62-44d43253ba65	GET	undefined	/subdir/css/style.css
+	20241017	21:30:28	caa5fb1a-4cd0-48ba-9753-05bf881f022c	GET	undefined	/new-page.html
+	20241017	21:30:28	03eea528-e829-4794-ad69-420e7c99d0fb	GET	undefined	/img/img1.jpg
+	20241017	21:30:28	a6759725-6f59-4244-af2a-37f407d4499b	GET	undefined	/css/style.css
+	20241017	21:31:41	4670f6c0-46a2-4984-9f1f-50875fc99c43	GET	undefined	/newpage.html
+	20241017	21:31:41	53436f42-315b-4fc7-9eeb-b193a90bf1a1	GET	undefined	/css/style.css
+	20241017	21:31:53	396ddcd9-9ccd-4386-9b9d-2ae7865e8df3	GET	undefined	/old-page.html
+	20241017	21:31:53	9152ee6e-0938-4e5c-b95b-246964d212ba	GET	undefined	/new-page.html
+	20241017	21:31:53	ee2b46af-6a3c-4eef-be45-be493bb28e0d	GET	undefined	/css/style.css
+	20241017	21:31:54	f704ceed-a786-4404-a0a2-2f2b84e769a0	GET	undefined	/img/img1.jpg
+	20241017	22:14:09	e2b56101-7095-4b56-9a59-5c5f772620bc	GET	undefined	/employees
+	20241017	22:15:43	5f5bb8e2-4a60-4286-b2fb-561d99fe37d6	GET	undefined	/employees
+	20241017	22:16:05	2d74ca39-a1dd-4e63-b2ea-03a3a3619136	GET	undefined	/new-page.html
+	20241017	22:16:29	421d3fe3-c90c-48fc-85e2-3d4fa4c0f3ec	GET	undefined	/empoyees
+	20241017	22:18:34	91a5fa31-d9bc-4d37-a972-7321dc6a3e2e	GET	undefined	/empoyees
+	20241017	22:18:43	11c3a3f7-99ff-49f5-9fbf-532b731b29ff	GET	undefined	/employees
+	20241017	22:19:22	2240fa3e-28ce-466c-8e48-7bd8c9a64aa6	POST	undefined	/employees
+	20241017	22:20:06	e462d7ca-d495-4831-b283-7c2a5c51d0cd	POST	undefined	/employees
+	20241017	22:20:47	acd486cd-84b2-4c2c-b11c-da55b6d499a0	PUT	undefined	/employees
+	20241017	22:21:12	0c66a46e-6c84-4737-ac02-84ff062f6d10	DELETE	undefined	/employees
+	20241017	22:21:27	ca5c931b-c6eb-4fd2-bba9-328d1d1a83d3	GET	undefined	/employees/1
 	
