@@ -67,73 +67,20 @@ app.use(express.json());
  * SERVE STATIC FILE example : css, img
  * 
  */
-app.use(express.static(path.join(__dirname, '/public')));
-
-//define route
-app.get('^/$|/index(.html)?',(req, res)=> {  
-    //sent in response
-
-    /*
-        ^ / $ : begin with slash , end with slash
-        | : OR
-        /index.html : slash index.html file path directly
-
-        /index(.html) : optinally if "/index" is entered in url
-    */
-
-    
-    /*res.send('Hello world!');*/
-    //send file
-    /*res.sendFile(
-        './views/index.html',
-        { root:__dirname }
-    );*/
-    res.sendFile(
-       path.join(__dirname, 'views' , 'index.html')
-    );
-});
-
-app.get('/new-page(.html)?',(req, res)=>{
-    res.sendFile(
-        path.join(__dirname, 'views' , 'new-page.html')
-    );
-})
+app.use('/',express.static(path.join(__dirname, '/public')));
+//for the route inside subdir to use the css
+app.use('/subdir',express.static(path.join(__dirname, '/public')));
 
 
-//REDIRECTION:
-app.get('/old-page(.html)?',(req, res)=>{
-    res.redirect(301,'/new-page.html'); 
-    // 302 response code by default : search engine might not thing it is redirect : so we mention the status code along the file
-});
+//provide the route
+/** 
+ * route any request for the subdirectory to the router
+ * 
+*/
+app.use('/', require('./routes/root'));
+app.use('/subdir', require('./routes/subdir'));
+app.use('/employees', require('./routes/api/employees'));
 
-//ROUT HANDLERS : 
-/**
- * we can chain them
- */
-app.get('/hello(.html)?', (req, res, next)=>{
-    console.log("attemped to load a file.");
-    next(); //moves to the next handler
-}, (req, res)=>{
-    res.send("heee ,,,");
-    //if last : no next
-});
-
-
-//Chanining the routes handlers
-const oneRoute = (req, res, next) => {
-    console.log("one");
-    next();
-};
-const twoRoute = (req, res, next) => {
-    console.log("two");
-    next();
-};
-const thirdRoute = (req, res) => {
-    console.log("three");  
-    res.send('Finised');  
-};
-
-app.get('/chain(.html)?',[oneRoute, twoRoute, thirdRoute]);
 
 //DEFAULT or CATCH ALL
 /**
@@ -148,12 +95,6 @@ app.get('/chain(.html)?',[oneRoute, twoRoute, thirdRoute]);
 // });
 
 //APP USE vs APP ALL
-/**
- * app.use('\') : no regex and for middleware only
- * app.all('*') : accept regex and best for routing and all http requests
- * 
- * for the following, comment app.use 404 code
- */
 app.all('*',(req, res)=>{
     res.status(404);
     
@@ -170,16 +111,6 @@ app.all('*',(req, res)=>{
     }
 });
 //CUSTOM ERROR HANDLING
-/**
- * has anonymous function with "err"
- * send the message in the browser
- * won't display in console, but on the browser
- */
-// app.use(function(err, req, res, next){
-//     console.error(err.stack);
-//     res.status(500).send(err.message);
-// }); 
-//using errorhandler we cretaed in middleware and importing it in our file logEvent
 app.use(errorHandler); 
 
 
