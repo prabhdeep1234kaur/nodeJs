@@ -94,4 +94,17 @@ undefined
 	20241018	23:32:56	2029889c-1f87-41dd-8757-92f746cb1695	DELETE	undefined	/employees
 	20241018	23:33:07	563ef7f0-95b3-4fe5-90d5-fce0a933388b	DELETE	undefined	/employees
 	20241018	23:33:25	a1f7c5fd-8210-4833-8b2e-c1ea9a52f7ed	PUT	undefined	/employees
+	20241019	21:40:02	7b91baaf-0202-40ac-ae73-12285ac6e047	POST	undefined	/register
+	20241019	21:40:14	30d08021-3777-4384-b4db-1a171ef97c20	POST	undefined	/register
+	20241019	21:41:42	8c7392d1-ff27-40af-b3e2-785ccc551911	POST	undefined	/register
+	20241019	21:41:56	bc8629aa-4edc-4785-b8fb-e8ae1597803f	POST	undefined	/register
+	20241019	21:42:10	65dcb430-8b38-42cc-8bfa-2833ad937254	POST	undefined	/register
+	20241019	21:42:46	d49d7246-e8c9-4f43-9a5c-627518a853de	POST	undefined	/register
+	20241019	21:42:57	c3d83969-196b-44eb-8417-fbb385f1a56d	POST	undefined	/register
+	20241019	21:43:38	46dda5aa-79d5-4955-aa42-5d8c807d2a6c	POST	undefined	/register
+	20241020	17:55:55	db9fb70d-d206-4672-ac6b-c700e468e160	POST	undefined	/register
+	20241020	18:08:13	af50a639-7547-4d3b-8509-27e423289b5a	POST	undefined	/auth
+	20241020	18:08:17	6e99a0c3-5c69-4498-bd68-1d589abee8c1	POST	undefined	/auth
+	20241020	18:09:45	3bce8c5a-4e4d-48b2-b101-d8099dcd3430	POST	undefined	/auth
+	20241020	18:10:12	65110ff7-6bd0-42c9-bf06-6c9e1dea50bb	POST	undefined	/auth
 	
