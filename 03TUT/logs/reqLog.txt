@@ -107,4 +107,17 @@ undefined
 	20241020	18:08:17	6e99a0c3-5c69-4498-bd68-1d589abee8c1	POST	undefined	/auth
 	20241020	18:09:45	3bce8c5a-4e4d-48b2-b101-d8099dcd3430	POST	undefined	/auth
 	20241020	18:10:12	65110ff7-6bd0-42c9-bf06-6c9e1dea50bb	POST	undefined	/auth
+	20241021	20:13:42	5ed518ee-0742-40e3-944f-a62bdbffce85	POST	undefined	/auth
+	20241021	20:14:36	9622602d-3b7e-4ebc-b98c-bb688b631ac4	POST	undefined	/auth
+	20241021	20:15:18	ced16fba-01e7-445f-8e2f-a9e99a4ecf50	POST	undefined	/auth
+	20241021	20:16:11	6dc77ca9-14c8-4f9f-93a0-bdc3190f1f1c	POST	undefined	/employees
+	20241021	20:19:01	03b7f40f-5ca5-439a-93ae-b1e96bfaf434	POST	undefined	/employees
+	20241021	20:21:00	5e8b5622-d393-44d5-b5be-360ebaa2c4d8	POST	undefined	/employees
+	20241021	20:21:04	3e0eb980-4d57-42a8-b745-82fa442d518f	POST	undefined	/employees
+	20241021	21:10:09	0e0ad590-1b2b-4ec5-b7dc-09a56da2cc6b	POST	undefined	/auth
+	20241022	19:51:39	c9eb07c7-1f2a-48bc-a004-e29c147e9019	POST	undefined	/auth
+	20241022	19:52:04	27ae16ff-902d-4276-936d-c91c3a5e99a6	GET	undefined	/logout
+	20241022	19:53:36	dc34f69a-bd9c-46bf-a30e-b7878bf90395	GET	undefined	/logout
+	20241022	19:53:53	412406c0-ba0e-45aa-a8c9-7f5c812a24db	GET	undefined	/logout
+	20241022	19:54:33	2e0361d0-1964-4e6d-95be-a0fb86f3cdb8	GET	undefined	/refresh
 	

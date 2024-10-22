@@ -7,6 +7,8 @@ const cors = require('cors');
 const corsOptions = require('./config/corsOptions');
 const {logger,logEvents}  = require('./middleware/logEvents');
 const errorHandler  = require('./middleware/errorHandler');
+const verifyJWT = require("./middleware/verifyJWT");
+const cookieParser = require("cookie-parser");
 const PORT = process.env.PORT || 3500;
 
 //CUSTOM MIDDLEWARE
@@ -29,6 +31,13 @@ app.use(express.json());
 
 /**
  * 
+ * middle ware of cocokie
+ *
+ * 
+ */
+app.use(cookieParser());
+/**
+ * 
  * SERVE STATIC FILE example : css, img
  * 
  */
@@ -43,9 +52,12 @@ app.use('/subdir',express.static(path.join(__dirname, '/public')));
  * 
 */
 app.use('/', require('./routes/root'));
-app.use('/employees', require('./routes/api/employees'));
 app.use('/register', require('./routes/api/register'));
 app.use('/auth', require('./routes/api/auth'));
+app.use('/refresh', require('./routes/api/refresh'));
+app.use('/logout', require('./routes/api/logout'));
+app.use(verifyJWT);//everyhting after this, will have verified route
+app.use('/employees', require('./routes/api/employees'));
 
 
 

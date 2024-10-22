@@ -1,2 +1,2 @@
 20241004	18:59:39	bf43ec47-4671-4805-8fc8-efdd051b005d	TypeError:fsPromises.readFilee is not a function
-	20241017	14:25:23	9e416f54-071d-47cf-adae-8ea0f9fbbcf3	Error: Not allowed by CORS	
+	20241017	14:25:23	9e416f54-071d-47cf-adae-8ea0f9fbbcf3	Error: Not allowed by CORS	20241021	20:19:01	ba47ccd4-53c6-45d6-af83-d310d655ace2	ReferenceError: jwt is not defined	
