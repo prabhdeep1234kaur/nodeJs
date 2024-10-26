@@ -1,3 +1,4 @@
+require('dotenv').config();
 //importing express
 const express = require('express'); 
 //call it express
@@ -9,7 +10,12 @@ const {logger,logEvents}  = require('./middleware/logEvents');
 const errorHandler  = require('./middleware/errorHandler');
 const verifyJWT = require("./middleware/verifyJWT");
 const cookieParser = require("cookie-parser");
+const mongoose = require("mongoose");
+const connectDB = require("./config/dbConn");
 const PORT = process.env.PORT || 3500;
+
+//connect to mongo
+connectDB();
 
 //CUSTOM MIDDLEWARE
 app.use(logger);
@@ -83,5 +89,8 @@ app.all('*',(req, res)=>{
 app.use(errorHandler); 
 
 
-//using app
-app.listen(PORT, ()=> console.log(`Server Running on port ${PORT}`));
+//using app : only when db is connected
+mongoose.connection.once("open",()=>{
+    console.log("Connected to MongoDB");
+    app.listen(PORT, ()=> console.log(`Server Running on port ${PORT}`));
+})
