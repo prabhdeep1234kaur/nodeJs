@@ -18,10 +18,16 @@ const handleLogin = async(req,res)=>{
     //if found : evaluate pwd
     const match = await bcrypt.compare(pwd, foundUser.password);
     if(match){
+        const roles = Object.values(foundUser.roles);
         //Create JWT for logged in user only : normal token and refreshed token
         //pass in payload : username obj //no pwd allowed //available to all who has token
         const accessToken = jwt.sign(
-            {"username": foundUser.username},
+            {
+                "UserInfo":{
+                    "username": foundUser.username,
+                    "roles" : roles
+                },
+            },
             process.env.ACCESS_TOKEN_SECRET,
             {expiresIn: `30s`} //in prod: 15 minutes atleast
         );
